@@ -5,3 +5,5 @@ cokoliwek
 
 
 moja zmiana
+
+Moja zmiana do usunięcia
