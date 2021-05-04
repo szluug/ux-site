@@ -2,3 +2,6 @@
 
 
 cokoliwek
+
+
+moja zmiana
