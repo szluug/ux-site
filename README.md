@@ -8,3 +8,7 @@ moja zmiana
 
 
 777
+
+
+
+gg
