@@ -1,22 +1,22 @@
 {
-    "kind": "collectionType",
-    "collectionName": "sites",
-    "info": {
-      "name": "Sites"
+  "kind": "collectionType",
+  "collectionName": "sites",
+  "info": {
+    "name": "Sites",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
     },
-    "options": {
-      "increments": true,
-      "timestamps": true,
-      "draftAndPublish": true
-    },
-    "pluginOptions": {},
-    "attributes": {
-      "Title": {
-        "type": "string"
-      },
-      "Content": {
-        "type": "richtext"
-      }
+    "Content": {
+      "type": "richtext"
     }
   }
-  
+}
