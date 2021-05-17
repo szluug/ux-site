@@ -1,7 +1,7 @@
 version: '3'
 services:
   strapi:
-    image: strapi/strapi
+    image: praktyki/praktyki
     volumes:
       - ./app:/srv/app
     ports:
