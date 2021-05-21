@@ -1,14 +1,26 @@
 # Playground for Ux site
 
+[ TODO: update]
 
-cokoliwek
+## Backends
 
+### Requirments 
 
-moja zmiana
+ * Python3
 
+### Get Started!
 
-777
+Run inside top ux-site directory
 
+```terminal
+python3 -m venv .venv
+source .venv/bin/activate # on Linux
+# TODO add coomand for windows
+(.venv) pip install -r backend/requirments.txt
+```
 
+For running flask application
 
-gg
+```terminal
+(.venv) python backend/app.py
+```
