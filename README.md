@@ -16,7 +16,7 @@ Run inside top ux-site directory
 python3 -m venv .venv
 source .venv/bin/activate # on Linux
 # TODO add coomand for windows
-(.venv) pip install -r backend/requirments.txt
+(.venv) pip install -r backend/requirements.txt
 ```
 
 For running flask application
@@ -27,7 +27,7 @@ For running flask application
 
 Add debug option in visual code:
 
-Sample condifuration in `.vscode/launch.json`
+Sample configuration in `.vscode/launch.json`
 
 ```json
 {
