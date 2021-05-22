@@ -4,11 +4,11 @@
 
 ## Backends
 
-### Requirments 
+### Requirments
 
- * Python3
+* Python3
 
-### Get Started!
+### Get Started
 
 Run inside top ux-site directory
 
@@ -23,4 +23,26 @@ For running flask application
 
 ```terminal
 (.venv) python backend/app.py
+```
+
+Add debub option in visual code:
+
+Sample condifuration in `.vscode/launch.json`
+
+```json
+{
+    "name": "Python: Flask",
+    "type": "python",
+    "request": "launch",
+    "module": "flask",
+    "env": {
+        "FLASK_APP": "backend/app:app",
+        "FLASK_ENV": "development"
+    },
+    "args": [
+        "run",
+        "--no-debugger"
+    ],
+    "jinja": true
+},
 ```
