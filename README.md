@@ -25,7 +25,7 @@ For running flask application
 (.venv) python backend/app.py
 ```
 
-Add debub option in visual code:
+Add debug option in visual code:
 
 Sample condifuration in `.vscode/launch.json`
 
