@@ -2,4 +2,11 @@
 .vscode
 
 app/*
-!app/api/*
+!app/api/**
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
