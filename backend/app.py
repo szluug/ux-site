@@ -14,6 +14,10 @@ def hello_world():
 def blog():
     return render_template('blog.html')
 
+@app.route('/about-us.html')
+def about_us():
+    return render_template('about-us.html')
+
 @app.route('/blog-single.html')
 def blog_single():
     return render_template('blog-single.html')
