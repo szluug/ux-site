@@ -15,7 +15,8 @@ Run inside top ux-site directory
 ```terminal
 python3 -m venv .venv
 source .venv/bin/activate # on Linux
-# TODO add coomand for windows
+.venv/Scripts/Activate.ps1 # win
+
 (.venv) pip install -r backend/requirements.txt
 ```
 
