@@ -2,7 +2,10 @@
 .vscode
 
 app/*
+!app/api
 !app/api/**
+!app/config
+!app/config/**
 
 
 # Byte-compiled / optimized / DLL files
