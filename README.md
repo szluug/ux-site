@@ -13,9 +13,17 @@
 Run inside top ux-site directory
 
 ```terminal
-python3 -m venv .venv
-source .venv/bin/activate # on Linux
-.venv/Scripts/Activate.ps1 # win
+$ python3 -m venv .venv
+$ source .venv/bin/activate # on Linux
+> .venv/Scripts/Activate.ps1 # on Windows
+# Note
+#
+# On Microsoft Windows, it may be required to enable the Activate.ps1 script 
+# by setting the execution policy for the user. 
+# You can do this by issuing the following PowerShell command:
+# 
+# PS C:> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 
 (.venv) pip install -r backend/requirements.txt
 ```
