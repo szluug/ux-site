@@ -354,130 +354,16 @@
       <div class="container">
 
         <div class="section-title">
-          
-          
-          <!DOCTYPE html>
-    <title>Quiz o Linuxie</title>
+          <h1>Witaj w quizie!</h1>
+    <p>Wybierz Quiz</p>
     
-</style>
-</head>
-<body>
 
-<div id="quiz-container">
-  <h1>Quiz</h1>
-  <form id="quiz-form">
-      <div class="question">
-          <p>Pierwsze pytanie: Co oznacza skrót CLI w kontekście Linuxa?</p>
-         
-              <li class="option">
-                  <input type="radio" name="question1" value="A" id="q1a">
-                  <label for="q1a">A. Command Line Interface</label>
-              </li>
-              <li class="option">
-                  <input type="radio" name="question1" value="B" id="q1b">
-                  <label for="q1b">B. Common Language Interface</label>
-              </li>
-              <li class="option">
-                  <input type="radio" name="question1" value="C" id="q1c">
-                  <label for="q1c">C. Computer Language Integration</label>
-              </li>
-          
-      </div>
+  </style>
+<div class="quiz-container">
+  <div class="quiz-box" onclick="window.location.href='quiz1-test.html'">Quiz o Linuxie</div>
+  <div class="quiz-box" onclick="window.location.href='quiz2-test.html'">Quiz o Html</div>
+  <div class="quiz-box" onclick="window.location.href='quiz3-test.html'">Quiz o Css</div>
 
-      <div class="question">
-          <p>Drugie pytanie: Jakie polecenie używamy do wylistowania plików i folderów w bieżącym katalogu?</p>
-          
-              <li class="option">
-                  <input type="radio" name="question2" value="A" id="q2a">
-                  <label for="q2a">A. ls</label>
-              </li>
-              <li class="option">
-                  <input type="radio" name="question2" value="B" id="q2b">
-                  <label for="q2b">B. cd</label>
-              </li>
-              <li class="option">
-                  <input type="radio" name="question2" value="C" id="q2c">
-                  <label for="q2c">C. rm</label>
-              </li>
-        
-      </div>
-
-      ->
-
-      <button type="button" onclick="showResult()">Sprawdź Wynik</button>
-  </form>
-
-  <div id="result"></div>
-</div>
-
-<script>
-  function showResult() {
-      var quizForm = document.getElementById('quiz-form');
-      var resultElement = document.getElementById('result');
-
-      
-      var q1Answered = isAnswered('question1');
-      var q2Answered = isAnswered('question2');
-
-      // Wyświetl wynik
-      if (q1Answered && q2Answered) {
-          var score = getScore();
-          var totalQuestions = getTotalQuestions();
-          var percentage = (score / totalQuestions) * 100;
-
-          resultElement.textContent = 'Twój wynik: ' + score + ' punktów z ' + totalQuestions + ' pytań. (' + percentage.toFixed(2) + '%)';
-      } else {
-          resultElement.textContent = 'Proszę zaznaczyć odpowiedzi dla obu pytań.';
-      }
-  }
-
-  function isAnswered(questionName) {
-      var options = document.getElementsByName(questionName);
-      for (var i = 0; i < options.length; i++) {
-          if (options[i].checked) {
-              return true;
-          }
-      }
-      return false;
-  }
-
-  function getScore() {
-      var score = 0;
-      var correctAnswers = ['A', 'A']; 
-      var userAnswers = getUserAnswers();
-
-      for (var i = 0; i < correctAnswers.length; i++) {
-          if (userAnswers[i] === correctAnswers[i]) {
-              score++;
-          }
-      }
-
-      return score;
-  }
-
-  function getUserAnswers() {
-      var userAnswers = [];
-      var questions = document.querySelectorAll('.question');
-
-      questions.forEach(function (question, index) {
-          var selectedOption = document.querySelector('input[name="question' + (index + 1) + '"]:checked');
-          userAnswers.push(selectedOption ? selectedOption.value : null);
-      });
-
-      return userAnswers;
-  }
-
-  function getTotalQuestions() {
-      return 2;
-  }
-      
-        
-      
-    </script>
-   
-
-
-        
     </section><!-- End Quiz Section -->
 
     <!-- ======= Pricing Section ======= -->

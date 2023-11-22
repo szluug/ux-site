@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 5px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Quiz 3</h2>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Co oznacza HTML?</p>
+            </div>
+            <ul class="options">
+                <li>
+                    <input type="radio" name="question1" value="a" id="q1a">
+                    <label for="q1a">a) Hyper Text Markup Language</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="b" id="q1b">
+                    <label for="q1b">b) High-level Text Machine Language</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="c" id="q1c">
+                    <label for="q1c">c) Hyper Transfer Markup Language</label>
+                </li>
+            </ul>
+
+            <div class="question">
+                <p>2. Który znacznik HTML jest używany do tworzenia hiperłączy?</p>
+            </div>
+            <ul class="options">
+                <li>
+                    <input type="radio" name="question2" value="a" id="q2a">
+                    <label for="q2a">a) &lt;link&gt;</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="b" id="q2b">
+                    <label for="q2b">b) &lt;a&gt;</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="c" id="q2c">
+                    <label for="q2c">c) &lt;url&gt;</label>
+                </li>
+            </ul>
+
+            <button type="button" id="submit-btn" onclick="checkAnswers()">Sprawdź odpowiedzi</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            // Pobierz wartości zaznaczonych odpowiedzi
+            var answer1 = document.querySelector('input[name="question1"]:checked');
+            var answer2 = document.querySelector('input[name="question2"]:checked');
+
+            // Sprawdź, czy wszystkie pytania zostały udzielone
+            if (!answer1 || !answer2) {
+                alert("Odpowiedz na wszystkie pytania!");
+                return;
+            }
+
+            // Sprawdź poprawność odpowiedzi
+            var score = 0;
+            if (answer1.value === "a") {
+                score += 1;
+            }
+            if (answer2.value === "b") {
+                score += 1;
+            }
+
+            // Wyświetl wynik
+            var resultContainer = document.getElementById("result");
+            resultContainer.innerHTML = "Twój wynik: " + score + "/2";
+        }
+    </script>
+</body>
+</html>
