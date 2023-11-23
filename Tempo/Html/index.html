@@ -355,14 +355,16 @@
 
         <div class="section-title">
           <h1>Witaj w quizie!</h1>
-    <p>Wybierz Quiz</p>
-    
+    <p>Kliknij poniżej, aby rozpocząć quiz:</p>
 
-  </style>
-<div class="quiz-container">
-  <div class="quiz-box" onclick="window.location.href='quiz1-test.html'">Quiz o Linuxie</div>
-  <div class="quiz-box" onclick="window.location.href='quiz2-test.html'">Quiz o Html</div>
-  <div class="quiz-box" onclick="window.location.href='quiz3-test.html'">Quiz o Css</div>
+    <button onclick="rozpocznijQuiz()">Rozpocznij Quiz</button>
+
+    <script>
+        function rozpocznijQuiz() {
+           
+            window.location.href = 'quiz-test.html';
+        }
+    </script>
 
     </section><!-- End Quiz Section -->
 
