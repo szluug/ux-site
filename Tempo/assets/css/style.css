@@ -105,6 +105,33 @@ section {
     width: 50%;
   }
 }
+
+<style>
+
+  body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#countdown {
+  text-align: center;
+}
+
+.countdown-item {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 2rem;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 8px;
+}
+</style>
 /*--------------------------------------------------------------
 # mettings
 --------------------------------------------------------------*/
@@ -126,11 +153,11 @@ section {
       .quiz-box {
           width: 150px;
           height: 80px;
-          background-color: #db3434;
+          background-color: #348ddb;
           color: #fff;
           text-align: center;
           line-height: 80px;
-          margin: 10px;
+          margin: 4px;
           cursor: pointer;
       }
 
