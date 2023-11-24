@@ -132,10 +132,48 @@ section {
   border-radius: 8px;
 }
 </style>
+
+/*--------------------------------------------------------------
+# Quiz
+--------------------------------------------------------------*/
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 5px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    
+
+    /*--------------------------------------------------------------
+# Quiz
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # mettings
 --------------------------------------------------------------*/
-<style>
+
          {
           display: flex;
           justify-content: center;
@@ -164,7 +202,7 @@ section {
       .quiz-box:hover {
           background-color: #3fb929;
       }
-  </style>
+  
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
