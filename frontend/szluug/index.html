@@ -141,8 +141,8 @@
         <div class="spotkania">
           <h2>Spotkania</h2>
           <div class="spotkania">
-          <img src="C:\Users\Damian\Downloads\pobrane">
-          <img src="static/assets/img/a-team.jpg" alt="" class="img-fluid">
+          <img src="assets/img/Druzyna.jpg">
+          <img src="/assets/img/a-team.jpg" alt="" class="img-fluid">
           <p>
             Następne spotkanie odbędzie się w firmie o godzinie 18. Zapraszamy do udziału w dyskusji na temat bezpieczeństwa w sieci
           </p>
@@ -155,39 +155,39 @@
                 </div>
               
                 <script>
-                  function updateCountdown() {
-                    const targetTime = localStorage.getItem('targetTime');
-              
-                    if (!targetTime) {
-                      
-                      const today = new Date();
-                      today.setHours(0, 0, 0, 0);
-                      localStorage.setItem('targetTime', today.getTime());
-                    }
-              
-                    const targetDate = new Date(parseInt(localStorage.getItem('targetTime')));
-                    const currentDate = new Date();
-                    const timeDifference = targetDate - currentDate;
-              
-                    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-              
-                    document.getElementById('days').innerText = formatTime(days);
-                    document.getElementById('hours').innerText = formatTime(hours);
-                    document.getElementById('minutes').innerText = formatTime(minutes);
-                    document.getElementById('seconds').innerText = formatTime(seconds);
-                  }
-              
-                  function formatTime(time) {
-                    return time < 10 ? `0${time}` : time;
-                  }
-              
-                  setInterval(updateCountdown, 1000);
-                  updateCountdown();
-                </script>
-     
+                  
+                  
+  
+            const targetHour = 12;
+
+    
+            function updateCountdown() {
+            const now = new Date();
+            const targetTime = new Date();
+              targetTime.setHours(targetHour, 0, 0, 0);
+
+      
+             let timeDiff = targetTime - now;
+
+      
+            if (timeDiff < 0) {
+            timeDiff += 24 * 60 * 60 * 1000; 
+             }
+
+      
+            const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+             const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+             const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      
+             document.getElementById('countdown').textContent = `${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            setInterval(updateCountdown, 1000);
+
+    
+             updateCountdown();
+             </script>
     </section><!-- End Spotkania Details Section -->
 
     <!-- ======= Services Section ======= -->
@@ -341,14 +341,14 @@
         <div class="section-title">
           <h1>Witaj w quizie!</h1>
     <p>Wybierz Quiz</p>
-    
-
-  </style>
+ <div class = "app" >
+  
+ </div>
 <div class="quiz-container">
   <div class="quiz-box" onclick="window.location.href='quiz1-test.html'">Quiz o Linuxie</div>
   <div class="quiz-box" onclick="window.location.href='quiz2-test.html'">Quiz o Html</div>
   <div class="quiz-box" onclick="window.location.href='quiz3-test.html'">Quiz o Css</div>
-
+   
     </section><!-- End Quiz Section -->
 
     <!-- ======= Pricing Section ======= -->

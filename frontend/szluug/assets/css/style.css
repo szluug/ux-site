@@ -139,37 +139,62 @@ section {
 
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 5550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+          
         }
-
-        .quiz-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .question {
-            margin-bottom: 10px;
-        }
-
-        .options {
-            list-style-type: none;
+         .question {
+          
+           max-width: 450px; 
+           width: 50%;
+           padding: 20px; 
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\
+           margin: 0 auto;
+          }
+        .czcionka{
+        
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: bold;
             padding: 0;
+            margin: 00 20px 0;|
+          
+            
+          }
+          
+        
+        .czerwonyprzycisk {
+          display: inline-block;
+          background: #e43c5c;
+          color: #fff;
+          padding: 5px 20px 7px 20px;
+          transition: 0.3s;
+          font-size: 14px;
+          border-radius: 10px;
         }
+        .shadow-box{
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         height: 100vh;
+        }
+        
+        
+       
 
-        .options li {
-            margin-bottom: 5px;
-        }
+        
 
-        #submit-btn {
-            margin-top: 10px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-    
+      
 
     /*--------------------------------------------------------------
 # Quiz
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # mettings
 --------------------------------------------------------------*/
@@ -186,6 +211,7 @@ section {
       .quiz-container {
           display: flex;
           justify-content: space-around;
+          
       }
 
       .quiz-box {
@@ -202,6 +228,16 @@ section {
       .quiz-box:hover {
           background-color: #3fb929;
       }
+
+      .countdown{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 2em;
+      }
+      
   
 /*--------------------------------------------------------------
 # Header
