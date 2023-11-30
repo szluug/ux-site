@@ -173,9 +173,9 @@
 })(jQuery);
 
 const now = new Date();
-let countToDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0, 0);
-if (now.getHours() >= 18) {
-  countToDate.setDate(countToDate.getDate() + 1);
+let countToDate = getNextThursdayAt6PM(now);
+if (now.getTime() >= countToDate.getTime()) {
+  countToDate = getNextThursdayAt6PMAfterTwoWeeks(now);
 }
 
 let previousTimeBetweenDates;
@@ -186,6 +186,21 @@ setInterval(() => {
 
   previousTimeBetweenDates = timeBetweenDates;
 }, 250);
+
+function getNextThursdayAt6PM(currentDate) {
+  const dayOfWeek = currentDate.getDay();
+  const daysUntilNextThursday = (11 - dayOfWeek + 7) % 7;
+  const nextThursday = new Date(currentDate);
+  nextThursday.setDate(currentDate.getDate() + daysUntilNextThursday);
+  nextThursday.setHours(18, 0, 0, 0); 
+  return nextThursday;
+}
+
+function getNextThursdayAt6PMAfterTwoWeeks(currentDate) {
+  const nextThursday = getNextThursdayAt6PM(currentDate);
+  nextThursday.setDate(nextThursday.getDate() + 14); 
+  return nextThursday;
+}
 
 function flipAllCards(time) {
   const seconds = time % 60;
