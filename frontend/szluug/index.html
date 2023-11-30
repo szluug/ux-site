@@ -137,57 +137,62 @@
           
           
         </div>
-
+        <div class="section-title">
         <div class="spotkania">
           <h2>Spotkania</h2>
+          </div>
           <div class="spotkania">
-          <img src="assets/img/Druzyna.jpg">
+            <p>
+              Następne spotkanie odbędzie się w firmie o godzinie 18. Zapraszamy do udziału w dyskusji na temat bezpieczeństwa w sieci
+            </p>
+            <div class="img">
+          <img src="assets/img/Druzyna.jpg" width="60%">
           <img src="/assets/img/a-team.jpg" alt="" class="img-fluid">
-          <p>
-            Następne spotkanie odbędzie się w firmie o godzinie 18. Zapraszamy do udziału w dyskusji na temat bezpieczeństwa w sieci
-          </p>
-            <body>
-                <div id="countdown">
-                  <div class="countdown-item" id="days">00</div>
-                  <div class="countdown-item" id="hours">00</div>
-                  <div class="countdown-item" id="minutes">00</div>
-                  <div class="countdown-item" id="seconds">00</div>
+        </div>
+          <body>
+            <div class="container1">
+              <div class="container-segment">
+                <div class="segment-title">Hours</div>
+                <div class="segment">
+                  <div class="flip-card" data-hours-tens>
+                    <div class="top">2</div>
+                    <div class="bottom">2</div>
+                  </div>
+                  <div class="flip-card" data-hours-ones>
+                    <div class="top">4</div>
+                    <div class="bottom">4</div>
+                  </div>
                 </div>
-              
-                <script>
-                  
-                  
-  
-            const targetHour = 12;
-
-    
-            function updateCountdown() {
-            const now = new Date();
-            const targetTime = new Date();
-              targetTime.setHours(targetHour, 0, 0, 0);
-
-      
-             let timeDiff = targetTime - now;
-
-      
-            if (timeDiff < 0) {
-            timeDiff += 24 * 60 * 60 * 1000; 
-             }
-
-      
-            const hours = Math.floor(timeDiff / (1000 * 60 * 60));
-             const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-             const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-      
-             document.getElementById('countdown').textContent = `${hours}h ${minutes}m ${seconds}s`;
-            }
-
-            setInterval(updateCountdown, 1000);
-
-    
-             updateCountdown();
-             </script>
+              </div>
+              <div class="container-segment">
+                <div class="segment-title">Minutes</div>
+                <div class="segment">
+                  <div class="flip-card" data-minutes-tens>
+                    <div class="top">0</div>
+                    <div class="bottom">0</div>
+                  </div>
+                  <div class="flip-card" data-minutes-ones>
+                    <div class="top">0</div>
+                    <div class="bottom">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-segment">
+                <div class="segment-title">Seconds</div>
+                <div class="segment">
+                  <div class="flip-card" data-seconds-tens>
+                    <div class="top">0</div>
+                    <div class="bottom">0</div>
+                  </div>
+                  <div class="flip-card" data-seconds-ones>
+                    <div class="top">0</div>
+                    <div class="bottom">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+           
     </section><!-- End Spotkania Details Section -->
 
     <!-- ======= Services Section ======= -->

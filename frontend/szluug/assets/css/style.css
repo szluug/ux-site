@@ -58,6 +58,104 @@ h1, h2, h3, h4, h5, h6 {
 # meetings
 --------------------------------------------------------------*/
 
+.img{
+  width: 100%;
+}
+body {
+  background-color: #f2f1ed;
+ 
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .100em;
+  line-height: 1;
+  padding: .50em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 200%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.container1 {
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: .1em;
+}
+
+.segment-title {
+  font-size: 1rem;
+  
+}
+
+/*--------------------------------------------------------------
+# meetings
+--------------------------------------------------------------*/
+
 section {
   padding: 60px 0;
 }
@@ -138,22 +236,22 @@ section {
 --------------------------------------------------------------*/
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 5550px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            
-          
+          font-family: Arial, sans-serif;
+          margin: 20px;
         }
+
+        .quiz-container {
+          max-width: 1000px;
+          margin: 0 auto;
+      }
          .question {
-          
-           max-width: 450px; 
+           
+           max-width: 1100px; 
            width: 50%;
            padding: 20px; 
-           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\
-           margin: 0 auto;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+           margin: 20px 0 25px 620px;
+           margin-bottom: 10px;
           }
         .czcionka{
         
@@ -165,7 +263,9 @@ section {
           
             
           }
-          
+          .options {
+            list-style-type: none;
+          }
         
         .czerwonyprzycisk {
           display: inline-block;
@@ -175,9 +275,10 @@ section {
           transition: 0.3s;
           font-size: 14px;
           border-radius: 10px;
+          margin: 20px 0 25px 1070px;
         }
         .shadow-box{
-          margin: 0 auto;
+          margin: 100px ;
           display: flex;
           align-items: center;
           justify-content: center;
